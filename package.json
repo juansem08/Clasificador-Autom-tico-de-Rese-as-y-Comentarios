@@ -29,7 +29,12 @@
     "typecheck:watch": "tsc --noEmit -p tsconfig.web.json --watch",
     "lint:check": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "format:check": "prettier --check .",
     "format": "prettier --write ."
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   },
   "dependencies": {
     "@google/genai": "^2.27.0",
