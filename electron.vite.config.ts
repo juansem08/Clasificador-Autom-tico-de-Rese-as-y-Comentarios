@@ -20,6 +20,10 @@ export default defineConfig({
         fastRefresh: true
       })
     ],
+    server: {
+      port: 5173,
+      strictPort: true
+    },
     build: {
       target: 'esnext',
       sourcemap: true,
