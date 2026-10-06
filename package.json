@@ -33,7 +33,8 @@
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "styles:check": "tailwindcss -i ./src/renderer/src/index.css --content ./src/renderer/src/**/*.{tsx,html} -o ./out/test-styles.css",
-    "audit": "npm audit --audit-level=high"
+    "audit": "npm audit --audit-level=high",
+    "ci:validate": "npm run typecheck && npm run lint:check && npm run build"
   },
   "prettier": {
     "semi": false,
