@@ -51,7 +51,7 @@
   "devDependencies": {
     "@electron-toolkit/preload": "3.0.1",
     "@electron-toolkit/utils": "3.0.0",
-    "@types/node": "^20.14.9",
+    "@types/node": "20.14.9",
     "@types/papaparse": "5.3.14",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
