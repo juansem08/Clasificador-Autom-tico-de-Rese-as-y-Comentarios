@@ -72,15 +72,27 @@
   "build": {
     "appId": "com.reviewclassifier.ai",
     "productName": "ReviewClassifier AI",
+    "asar": true,
+    "compression": "maximum",
     "directories": {
       "buildResources": "build",
       "output": "dist"
     },
+    "files": [
+      "out/**/*",
+      "!out/**/*.tsbuildinfo",
+      "!node_modules/**/@types",
+      "!node_modules/**/*.md"
+    ],
     "win": {
       "target": [
         "nsis",
         "portable"
       ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     },
     "mac": {
       "target": [
