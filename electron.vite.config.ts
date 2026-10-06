@@ -15,11 +15,7 @@ export default defineConfig({
         '@renderer': resolve('src/renderer/src')
       }
     },
-    plugins: [
-      react({
-        fastRefresh: true
-      })
-    ],
+    plugins: [react()],
     server: {
       port: 5173,
       strictPort: true

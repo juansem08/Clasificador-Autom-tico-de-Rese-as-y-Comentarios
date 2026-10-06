@@ -15,7 +15,7 @@ export class CsvService {
    */
   public async parseCsv(file: File): Promise<CsvDatasetInfo> {
     return new Promise((resolve, reject) => {
-      Papa.parse(file, {
+      Papa.parse<Record<string, any>>(file as any, {
         header: true,
         skipEmptyLines: 'greedy',
         dynamicTyping: false,
@@ -50,7 +50,7 @@ export class CsvService {
             data: indexedData
           })
         },
-        error: (error: Papa.ParseError) => {
+        error: (error: Error) => {
           reject(new Error(`Fallo de lectura de archivo CSV: ${error.message}`))
         }
       })
