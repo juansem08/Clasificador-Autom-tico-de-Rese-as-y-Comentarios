@@ -19,6 +19,17 @@ export default defineConfig({
       react({
         fastRefresh: true
       })
-    ]
+    ],
+    build: {
+      target: 'esnext',
+      sourcemap: true,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ['react', 'react-dom']
+          }
+        }
+      }
+    }
   }
 })
