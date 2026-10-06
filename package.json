@@ -30,7 +30,8 @@
     "lint:check": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
     "format:check": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "styles:check": "tailwindcss -i ./src/renderer/src/index.css --content ./src/renderer/src/**/*.{tsx,html} -o ./out/test-styles.css"
   },
   "prettier": {
     "semi": false,
