@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#f1f5f9","on-tertiary":"#ffffff","inverse-primary":"#ffb68e","primary":"#b45309","on-tertiary-fixed":"#40000c","inverse-on-surface":"#eef0ff","surface-tint":"#9b4500","on-primary-fixed":"#331200","surface-container-lowest":"#ffffff","on-primary":"#ffffff","on-error":"#ffffff","error-container":"#ffdad6","on-secondary-fixed":"#002114","tertiary-fixed":"#ffdada","surface-variant":"#e2e8f0","on-tertiary-container":"#920028","inverse-surface":"#1e293b","surface-container-highest":"#e2e8f0","surface-container-low":"#ffffff","on-error-container":"#93000a","primary-container":"#b45309","error":"#ba1a1a","on-surface-variant":"#64748b","secondary-fixed-dim":"#68dba9","tertiary":"#b00032","surface-container-high":"#f8fafc","on-secondary-container":"#005137","secondary-fixed":"#85f8c4","surface-bright":"#ffffff","on-secondary-fixed-variant":"#005137","tertiary-fixed-dim":"#ffb3b6","outline-variant":"#e2e8f0","primary-fixed-dim":"#ffb68e","secondary":"#059669","on-background":"#0f172a","background":"#f8fafc","on-tertiary-fixed-variant":"#920028","surface":"#f8fafc","primary-fixed":"#ffdbca","on-secondary":"#ffffff","tertiary-container":"#fee2e2","on-surface":"#0f172a","on-primary-container":"#ffffff","on-primary-fixed-variant":"#763300","secondary-container":"#d1fae5","outline":"#94a3b8","surface-dim":"#f1f5f9"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"2rem","space-sm":"0.5rem","margin":"1.5rem","space-xs":"0.25rem","space-lg":"1.25rem","space-md":"0.75rem","gutter":"1.25rem"},"fontFamily":{"headline-lg":["Newsreader"],"data-mono":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"headline-md":["Newsreader"],"body-md":["Hanken Grotesk"],"label-md":["JetBrains Mono"],"headline-xl":["Newsreader"],"body-sm":["Hanken Grotesk"],"body-lg":["Hanken Grotesk"],"headline-sm":["Newsreader"]},"fontSize":{"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"400"}],"data-mono":["12px",{"lineHeight":"16px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-amber-100 selection:text-amber-900 min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-outline-variant shadow-sm"><div class="h-14 w-full px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-1.5 pr-space-sm"><span class="w-3 h-3 rounded-full bg-[#f43f5e] inline-block shadow-inner"></span><span class="w-3 h-3 rounded-full bg-[#f59e0b] inline-block shadow-inner"></span><span class="w-3 h-3 rounded-full bg-[#10b981] inline-block shadow-inner"></span></div><div class="h-4 w-px bg-slate-200"></div><div class="flex items-center gap-space-sm pl-space-xs"><span class="font-headline-sm text-headline-sm text-slate-900 tracking-tight font-serif">ReviewScope AI</span><span class="font-label-sm text-label-sm text-amber-700 bg-amber-50 px-space-xs py-0.5 rounded-lg border border-amber-200/70 font-semibold">v2.4 Core AI</span></div></div><nav class="hidden xl:flex items-center gap-1 bg-slate-100 px-1.5 py-1 rounded-full border border-slate-200/80" data-active-classes="bg-white text-slate-900 font-medium shadow-sm"><a aria-current="page" class="px-space-md py-1 rounded-full transition-all bg-white text-amber-900 font-semibold shadow-sm border border-slate-200/50" data-path="overview" href="#">Overview</a><a class="px-space-md py-1 rounded-full font-label-md text-label-md text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-all" data-path="csv-batches" href="#">CSV Batches</a><a class="px-space-md py-1 rounded-full font-label-md text-label-md text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-all" data-path="sentiment-matrix" href="#">Sentiment Matrix</a><a class="px-space-md py-1 rounded-full font-label-md text-label-md text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-all" data-path="export-studio" href="#">Export Studio</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="relative hidden md:flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-slate-400 text-[18px] pointer-events-none">search</span><input class="w-56 lg:w-64 pl-8 pr-10 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 font-body-sm text-body-sm placeholder:text-slate-400 focus:outline-none focus:border-amber-600 focus:bg-white transition-colors" placeholder="Filter customer quotes..." type="text"/><span class="absolute right-2 px-1.5 py-0.5 rounded bg-white text-slate-500 font-label-sm text-label-sm border border-slate-200 shadow-2xs">⌘K</span></div><div class="hidden sm:flex items-center gap-2 px-space-sm py-1 rounded-full bg-slate-100 border border-slate-200"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span></span><span class="font-label-sm text-label-sm text-slate-600">Model: <span class="text-emerald-700 font-semibold">Claude 3.5 Sonnet</span></span></div><button class="flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 border border-slate-200 transition-colors" title="API Key Status: Secured" type="button"><span class="material-symbols-outlined text-[18px]">lock</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-slate-200 shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1VdyhNQwGpU7neO3VfEU9EE9oGhXOtNkF5MPKCH7xXloq0K_C0lUnoYnjqBAa4Qe3-zjB16JBgcrIaV1b4eye7oKkL_aHd0aVgU0JD8pApWccjwE3tHwJbN4gDI0PsxYPZJjQrfV3JSOWtW2pIWpGMQqnbKExFvG9ZiZbMF6cm5vZjeNDyIv4caB4LtgxloWd-nqhV1NetmOl-vgviiksJFVMCh8E9H7IVy7RkNl17TFbwCe_Bg7sl2nQ"/></div></div></header><main class="w-full pt-14 pb-8 bg-slate-50 min-h-[calc(100vh-32px)]"><div class="flex flex-col w-full">
+<div class="w-full px-margin py-space-lg flex flex-col gap-space-xl max-w-[1720px] mx-auto">
+<!-- SECTION 1: UPPER HERO SHOWCASE ('Executive Pulse' Banner) -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-gutter items-stretch">
+<!-- Left Hero Block (Cols 1-8) -->
+<div class="xl:col-span-8 bg-white border border-slate-200 rounded-xl p-space-xl flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<!-- Ambient decorative aura -->
+<div class="absolute -top-32 -right-24 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -left-20 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<!-- Micro Label -->
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200/80 font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
+              AI Analysis Engine • Active Batch
+            </span>
+<span class="text-slate-300 font-data-mono text-data-mono">•</span>
+<span class="font-data-mono text-data-mono text-slate-500 font-medium">NODE_08_CALIFORNIA</span>
+</div>
+<!-- Editorial Title -->
+<h1 class="font-headline-xl text-headline-xl text-slate-900 font-serif tracking-tight leading-none mt-1">
+            Voice of Customer: <span class="italic text-amber-700">2026 Audit</span>
+</h1>
+<!-- Subtitle / Meta -->
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-slate-600">
+<span class="flex items-center gap-1.5 text-slate-900 font-semibold">
+<span class="material-symbols-outlined text-[16px] text-amber-600">analytics</span>
+              1,420 Reviews Parsed
+            </span>
+<span class="text-slate-300">/</span>
+<span>Multi-channel Feedback Stream</span>
+<span class="text-slate-300">/</span>
+<span class="font-data-mono text-emerald-700 font-semibold">LLM Classification Engine v2.4</span>
+</div>
+<!-- Narrative Editorial Callout -->
+<div class="mt-space-sm p-space-md rounded-lg bg-amber-50/50 border border-amber-100 shadow-2xs relative pl-space-lg">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-amber-600 to-emerald-600 rounded-l"></div>
+<p class="font-body-md text-body-md text-slate-800 italic leading-relaxed">
+              “Real-time automated sentiment synthesis across multi-cohort customer complaints, isolating friction vectors across tier-2 provisioning and enterprise pricing resistance.”
+            </p>
+<div class="mt-2 flex items-center gap-2 font-label-sm text-label-sm text-slate-500">
+<span>Synthesized by Claude 3.5 Sonnet</span>
+<span>•</span>
+<span class="text-amber-800 font-data-mono font-semibold">99.4% Latency Confidence</span>
+</div>
+</div>
+</div>
+<!-- Action Toolbar -->
+<div class="relative z-10 flex flex-wrap items-center gap-space-sm pt-space-lg mt-space-md border-t border-slate-100">
+<button class="px-space-lg py-2.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-body-md text-body-md font-semibold flex items-center gap-2 shadow-sm shadow-amber-600/30 transition-all transform active:scale-95 cursor-pointer" id="runClassifierBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Run AI Classifier</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-body-md text-body-md font-medium flex items-center gap-2 transition-all shadow-2xs cursor-pointer" id="uploadDatasetBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-amber-700">upload_file</span>
+<span>Upload .CSV Dataset</span>
+</button>
+<div class="relative inline-block text-left">
+<button class="px-space-md py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 border border-slate-200 font-label-md text-label-md font-medium flex items-center gap-1.5 transition-all cursor-pointer" id="presetDropdownToggle" type="button">
+<span class="material-symbols-outlined text-[16px] text-amber-600">star</span>
+<span>Save Filter Preset</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<div class="ml-auto hidden lg:flex items-center gap-space-sm text-slate-500 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>Pipeline Hot-standby</span>
+</div>
+</div>
+</div>
+<!-- Right Hero Feature (Cols 9-12) -->
+<div class="xl:col-span-4 bg-white border border-slate-200 rounded-xl p-space-xl flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-slate-500 font-semibold">Synthesized Metric Gauge</span>
+<span class="font-data-mono text-data-mono text-emerald-700 font-semibold px-2 py-0.5 rounded bg-emerald-50 border border-emerald-200">STREAM ONLINE</span>
+</div>
+<!-- Radial Gauge & Big Stats -->
+<div class="my-space-md flex flex-col items-center justify-center relative">
+<div class="relative w-44 h-44 flex items-center justify-center">
+<!-- Background Circular Track -->
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 120 120">
+<circle class="text-slate-100" cx="60" cy="60" fill="none" r="50" stroke="currentColor" stroke-width="10"></circle>
+<!-- Positive 74% Arc (Emerald / Secondary) -->
+<circle class="text-emerald-500" cx="60" cy="60" fill="none" r="50" stroke="currentColor" stroke-dasharray="314.16" stroke-dashoffset="81.68" stroke-linecap="round" stroke-width="10"></circle>
+<!-- Warning 16% segment (Amber / Primary) -->
+<circle class="text-amber-500 opacity-90" cx="60" cy="60" fill="none" r="50" stroke="currentColor" stroke-dasharray="314.16" stroke-dashoffset="260" stroke-linecap="round" stroke-width="6"></circle>
+</svg>
+<!-- Core Text -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg text-headline-lg font-serif text-slate-900 tracking-tight leading-none">8.4</span>
+<span class="font-label-sm text-label-sm text-slate-500 font-data-mono mt-0.5">/ 10 SCORE</span>
+<span class="mt-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+                74% POSITIVE
+              </span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-slate-500 mt-2 text-center">
+            Net sentiment calculated across 12 product domains
+          </p>
+</div>
+<!-- Mini Live Metric Cards Grid -->
+<div class="grid grid-cols-3 gap-2 pt-space-sm bg-slate-50 p-2.5 rounded-lg border border-slate-200/70">
+<div class="flex flex-col p-2 rounded bg-white border border-slate-200/60 shadow-2xs">
+<span class="font-label-sm text-label-sm text-slate-500 truncate">Processed</span>
+<span class="font-data-mono text-[14px] text-slate-900 font-semibold mt-0.5">1,420</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-medium">100% feed</span>
+</div>
+<div class="flex flex-col p-2 rounded bg-white border border-slate-200/60 shadow-2xs">
+<span class="font-label-sm text-label-sm text-slate-500 truncate">Dominant</span>
+<span class="font-body-sm text-body-sm text-slate-900 font-semibold truncate mt-0.5">Support</span>
+<span class="font-label-sm text-label-sm text-amber-700 font-data-mono font-medium">42% volume</span>
+</div>
+<div class="flex flex-col p-2 rounded bg-white border border-slate-200/60 shadow-2xs">
+<span class="font-label-sm text-label-sm text-slate-500 truncate">Avg Tone</span>
+<span class="font-body-sm text-body-sm text-slate-900 font-semibold truncate mt-0.5">Optimism</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-data-mono font-medium">Moderate</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: CONFIGURATION & INGESTION ROW (Middle Section) -->
+<section class="bg-white border border-slate-200 rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<!-- Active File Badge & Selector -->
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-3 px-space-md py-2 rounded-lg bg-slate-50 border border-slate-200">
+<span class="material-symbols-outlined text-amber-600 text-[22px]">table_chart</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-slate-900 font-semibold">q3_customer_feedback.csv</span>
+<span class="px-1.5 py-0.2 rounded bg-white border border-slate-200 text-slate-600 font-label-sm text-label-sm">2.4 MB</span>
+</div>
+<span class="font-body-sm text-body-sm text-slate-500">1,420 rows loaded • Delimiter: Comma</span>
+</div>
+</div>
+<!-- Target Column Selector Dropdown -->
+<div class="relative">
+<label class="sr-only">Target Review Column</label>
+<div class="flex items-center bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5">
+<span class="font-label-sm text-label-sm text-slate-500 mr-2 font-medium">Target Column:</span>
+<select class="bg-transparent text-amber-800 font-semibold font-data-mono text-data-mono focus:outline-none cursor-pointer pr-4">
+<option class="bg-white text-slate-900" value="customer_feedback_text">customer_feedback_text (Previewed)</option>
+<option class="bg-white text-slate-900" value="raw_user_comments">raw_user_comments</option>
+<option class="bg-white text-slate-900" value="survey_nps_verbatim">survey_nps_verbatim</option>
+<option class="bg-white text-slate-900" value="support_transcript">support_transcript</option>
+</select>
+</div>
+</div>
+<!-- Active Prompt Model Spec -->
+<div class="hidden md:flex items-center gap-2 px-space-md py-1.5 rounded-lg bg-slate-50 border border-slate-200">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">neurology</span>
+<span class="font-body-sm text-body-sm text-slate-800 font-medium">Gemini 1.5 Pro</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="font-label-sm text-label-sm text-amber-700 font-data-mono font-semibold">Few-Shot Prompt v4</span>
+</div>
+</div>
+<!-- Right Quick Controls -->
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 border border-slate-200 font-label-sm text-label-sm flex items-center gap-1.5 transition-colors cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Hyperparameters</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 border border-slate-200 font-label-sm text-label-sm flex items-center gap-1.5 transition-colors cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Sync Schemas</span>
+</button>
+</div>
+</div>
+<!-- Live Processing Telemetry & Segmented Progress Meter -->
+<div class="flex flex-col gap-2 pt-space-xs">
+<div class="flex flex-wrap items-center justify-between text-slate-600 font-data-mono text-data-mono">
+<div class="flex items-center gap-space-md">
+<span class="text-slate-900 font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-amber-600 animate-ping"></span>
+              Batch 6/12 In Progress
+            </span>
+<span class="text-slate-300">•</span>
+<span>720 / 1420 rows analyzed (51%)</span>
+<span class="text-slate-300">•</span>
+<span class="text-emerald-700 font-semibold">0 validation errors</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-slate-900 font-medium">Throughput: <span class="text-amber-700 font-semibold">84 rows/sec</span></span>
+<span class="text-slate-300">|</span>
+<span>ETA: <span class="text-slate-900 font-medium">8.3s</span></span>
+</div>
+</div>
+<!-- Segmented 2-Tone Gradient Progress Bar -->
+<div class="w-full h-3 rounded-full bg-slate-100 overflow-hidden flex relative p-0.5 border border-slate-200 shadow-inner">
+<div class="h-full rounded-l-full bg-gradient-to-r from-emerald-500 via-amber-500 to-amber-600 transition-all duration-500 relative" style="width: 51%;">
+<div class="absolute inset-0 bg-white/25 animate-[pulse_2s_infinite]"></div>
+</div>
+<!-- Remaining placeholder indicators -->
+<div class="h-full bg-transparent rounded-r-full" style="width: 49%;"></div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: BENTO-STYLE GRID OF CLASSIFIED REVIEW CARDS (Core Gallery) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<h2 class="font-headline-md text-headline-md font-serif text-slate-900">Classified Telemetry Stream</h2>
+<span class="font-label-sm text-label-sm text-slate-600 bg-white border border-slate-200 px-2.5 py-0.5 rounded-full shadow-2xs">Showing latest 6 cards</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-amber-800 font-label-sm text-label-sm font-medium flex items-center gap-1 hover:bg-slate-50 shadow-2xs cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[14px]">filter_list</span> Filter by Tag
+          </button>
+<button class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-600 font-label-sm text-label-sm font-medium flex items-center gap-1 hover:bg-slate-50 shadow-2xs cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[14px]">sort</span> Score Descending
+          </button>
+</div>
+</div>
+<!-- Bento 3-Column Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter items-stretch">
+<!-- Card 1: Negative - Support -->
+<article class="bg-white border border-slate-200/90 rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 relative group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-slate-900 font-semibold">#USR-8921</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="font-body-sm text-body-sm text-slate-500">Oct 24, 2025</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200 font-data-mono text-label-sm flex items-center gap-1 shadow-2xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600"></span>
+                Negative (-0.88)
+              </span>
+</div>
+<!-- Review Text with highlighted phrases -->
+<p class="font-body-md text-body-md text-slate-800 leading-relaxed">
+              “The onboarding team <span class="bg-rose-50 text-rose-700 border-b border-rose-300 px-1 py-0.5 rounded font-medium">took 4 days to reply</span> to our enterprise provisioning request, causing a complete rollout halt for our 200 engineers.”
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between border-t border-slate-100">
+<span class="px-2 py-1 rounded bg-slate-100 border border-slate-200 text-slate-700 font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-rose-600">support_agent</span>
+              Atención / Support
+            </span>
+<span class="font-data-mono text-label-sm text-rose-700 font-semibold">98% Match</span>
+</div>
+</article>
+<!-- Card 2: Positive - Product -->
+<article class="bg-white border border-slate-200/90 rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 relative group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-slate-900 font-semibold">#USR-9104</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="font-body-sm text-body-sm text-slate-500">Oct 23, 2025</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-data-mono text-label-sm flex items-center gap-1 shadow-2xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Positive (+0.94)
+              </span>
+</div>
+<!-- Review Text with highlighted praise -->
+<p class="font-body-md text-body-md text-slate-800 leading-relaxed">
+              “The automated CSV export pipeline is <span class="bg-emerald-50 text-emerald-800 border-b border-emerald-300 px-1 py-0.5 rounded font-medium">lightning fast</span>. We cut manual customer ticket triage from 12 hours a week <span class="bg-emerald-50 text-emerald-800 border-b border-emerald-300 px-1 py-0.5 rounded font-medium">down to 15 minutes</span>.”
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between border-t border-slate-100">
+<span class="px-2 py-1 rounded bg-slate-100 border border-slate-200 text-slate-700 font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">inventory_2</span>
+              Calidad / Product
+            </span>
+<span class="font-data-mono text-label-sm text-emerald-700 font-semibold">99% Match</span>
+</div>
+</article>
+<!-- Card 3: Negative - Pricing -->
+<article class="bg-white border border-slate-200/90 rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 relative group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-slate-900 font-semibold">#USR-7732</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="font-body-sm text-body-sm text-slate-500">Oct 22, 2025</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200 font-data-mono text-label-sm flex items-center gap-1 shadow-2xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600"></span>
+                Negative (-0.64)
+              </span>
+</div>
+<!-- Review Text with highlighted critique -->
+<p class="font-body-md text-body-md text-slate-800 leading-relaxed">
+              “Tier 2 pricing <span class="bg-rose-50 text-rose-700 border-b border-rose-300 px-1 py-0.5 rounded font-medium">jumped 35% without notice</span>. We love the telemetry, but the new seat minimums make renewal hard to justify to finance.”
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between border-t border-slate-100">
+<span class="px-2 py-1 rounded bg-slate-100 border border-slate-200 text-slate-700 font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-amber-700">sell</span>
+              Precio / Pricing
+            </span>
+<span class="font-data-mono text-label-sm text-rose-700 font-semibold">94% Match</span>
+</div>
+</article>
+<!-- Card 4: Neutral - Feature Request -->
+<article class="bg-white border border-slate-200/90 rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 relative group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-slate-900 font-semibold">#USR-6618</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="font-body-sm text-body-sm text-slate-500">Oct 21, 2025</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200 font-data-mono text-label-sm flex items-center gap-1 shadow-2xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                Neutral (0.02)
+              </span>
+</div>
+<!-- Review Text -->
+<p class="font-body-md text-body-md text-slate-800 leading-relaxed">
+              “Standard reporting works as expected. Would appreciate more native Webhook triggers instead of relying entirely on Zapier integration scripts.”
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between border-t border-slate-100">
+<span class="px-2 py-1 rounded bg-slate-100 border border-slate-200 text-slate-700 font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-slate-500">settings_input_component</span>
+              Calidad / Feature Req
+            </span>
+<span class="font-data-mono text-label-sm text-slate-600 font-semibold">91% Match</span>
+</div>
+</article>
+<!-- Card 5: Positive - Support -->
+<article class="bg-white border border-slate-200/90 rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 relative group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-slate-900 font-semibold">#USR-5441</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="font-body-sm text-body-sm text-slate-500">Oct 20, 2025</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-data-mono text-label-sm flex items-center gap-1 shadow-2xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Positive (+0.81)
+              </span>
+</div>
+<!-- Review Text with highlighted praise -->
+<p class="font-body-md text-body-md text-slate-800 leading-relaxed">
+              “<span class="bg-emerald-50 text-emerald-800 border-b border-emerald-300 px-1 py-0.5 rounded font-medium">Immediate resolution</span> on our billing bug within 10 minutes of filing. Elena on the VIP support desk was exceptionally thorough.”
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between border-t border-slate-100">
+<span class="px-2 py-1 rounded bg-slate-100 border border-slate-200 text-slate-700 font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">support_agent</span>
+              Atención / Support
+            </span>
+<span class="font-data-mono text-label-sm text-emerald-700 font-semibold">97% Match</span>
+</div>
+</article>
+<!-- Card 6: Negative - Documentation -->
+<article class="bg-white border border-slate-200/90 rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 relative group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="font-data-mono text-data-mono text-slate-900 font-semibold">#USR-4019</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="font-body-sm text-body-sm text-slate-500">Oct 19, 2025</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200 font-data-mono text-label-sm flex items-center gap-1 shadow-2xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600"></span>
+                Negative (-0.79)
+              </span>
+</div>
+<!-- Review Text with highlighted critique -->
+<p class="font-body-md text-body-md text-slate-800 leading-relaxed">
+              “Documentation for the REST endpoints is <span class="bg-rose-50 text-rose-700 border-b border-rose-300 px-1 py-0.5 rounded font-medium">out of date</span>. Spent half a day debugging 403 errors that turned out to be an undocumented auth header requirement.”
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between border-t border-slate-100">
+<span class="px-2 py-1 rounded bg-slate-100 border border-slate-200 text-slate-700 font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-rose-600">menu_book</span>
+              Atención / Docs
+            </span>
+<span class="font-data-mono text-label-sm text-rose-700 font-semibold">96% Match</span>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION 4: SPREADSHEET-STYLE DATA PREVIEW TABLE -->
+<section class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="px-space-lg py-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-amber-600 text-[20px]">table_rows</span>
+<h3 class="font-headline-sm text-headline-sm font-serif text-slate-900">Data Sheet Ingestion Preview</h3>
+<span class="font-data-mono text-data-mono text-slate-600 px-2 py-0.5 rounded bg-white border border-slate-200">Schema: enriched_sentiment_v2</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm text-slate-500">Showing sample 4 of 1,420 rows</span>
+<button class="p-1 text-slate-500 hover:text-slate-900 rounded hover:bg-slate-200 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Responsive Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-100/70 border-b border-slate-200 text-slate-600 font-data-mono text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-md w-24"># ID</th>
+<th class="py-2.5 px-space-md min-w-[320px]">Original: customer_feedback_text</th>
+<th class="py-2.5 px-space-md w-36">ai_sentiment</th>
+<th class="py-2.5 px-space-md w-40">ai_category</th>
+<th class="py-2.5 px-space-md w-32">confidence</th>
+<th class="py-2.5 px-space-md w-40">timestamp</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<!-- Row 1 -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-space-md font-data-mono text-data-mono text-slate-600 font-medium">USR-8921</td>
+<td class="py-3 px-space-md font-body-sm text-body-sm text-slate-800 truncate max-w-xs md:max-w-md">
+                The onboarding team took 4 days to reply to our enterprise provisioning request...
+              </td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200 font-data-mono text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600"></span> Negativo
+                </span>
+</td>
+<td class="py-3 px-space-md font-body-sm text-body-sm text-slate-800">Atención</td>
+<td class="py-3 px-space-md font-data-mono text-data-mono text-emerald-700 font-semibold">0.982</td>
+<td class="py-3 px-space-md font-data-mono text-data-mono text-slate-500">2025-10-24 14:12</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-space-md font-data-mono text-data-mono text-slate-600 font-medium">USR-9104</td>
+<td class="py-3 px-space-md font-body-sm text-body-sm text-slate-800 truncate max-w-xs md:max-w-md">
+                The automated CSV export pipeline is lightning fast. We cut manual customer ticket triage...
+              </td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-data-mono text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Positivo
+                </span>
+</td>
+<td class="py-3 px-space-md font-body-sm text-body-sm text-slate-800">Calidad</td>
+<td class="py-3 px-space-md font-data-mono text-data-mono text-emerald-700 font-semibold">0.994</td>
+<td class="py-3 px-space-md font-data-mono text-data-mono text-slate-500">2025-10-23 09:44</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-space-md font-data-mono text-data-mono text-slate-600 font-medium">USR-7732</td>
+<td class="py-3 px-space-md font-body-sm text-body-sm text-slate-800 truncate max-w-xs md:max-w-md">
+                Tier 2 pricing jumped 35% without advance notice. We love the telemetry, but the new seat minimums...
+              </td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200 font-data-mono text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600"></span> Negativo
+                </span>
+</td>
+<td class="py-3 px-space-md font-body-sm text-body-sm text-slate-800">Precio</td>
+<td class="py-3 px-space-md font-data-mono text-data-mono text-emerald-700 font-semibold">0.941</td>
+<td class="py-3 px-space-md font-data-mono text-data-mono text-slate-500">2025-10-22 17:05</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="py-3 px-space-md font-data-mono text-data-mono text-slate-600 font-medium">USR-6618</td>
+<td class="py-3 px-space-md font-body-sm text-body-sm text-slate-800 truncate max-w-xs md:max-w-md">
+                Standard reporting works as expected. Would appreciate more native Webhook triggers instead of Zapier...
+              </td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200 font-data-mono text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Neutro
+                </span>
+</td>
+<td class="py-3 px-space-md font-body-sm text-body-sm text-slate-800">Calidad</td>
+<td class="py-3 px-space-md font-data-mono text-data-mono text-emerald-700 font-semibold">0.910</td>
+<td class="py-3 px-space-md font-data-mono text-data-mono text-slate-500">2025-10-21 11:30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- SECTION 5: FLOATING PERSISTENT BOTTOM EXPORT DRAWER -->
+<div class="sticky bottom-10 z-30 w-full">
+<aside aria-label="Export Actions" class="w-full bg-white/95 backdrop-blur-xl border border-slate-200 rounded-xl p-space-md shadow-lg shadow-slate-200/80 flex flex-wrap items-center justify-between gap-space-md">
+<!-- Left status -->
+<div class="flex items-center gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-700">
+<span class="material-symbols-outlined text-[20px]">file_download_done</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md text-slate-900 font-semibold">1,420 rows classified</span>
+<span class="px-1.5 py-0.5 rounded bg-emerald-50 border border-emerald-200 text-emerald-800 font-label-sm text-label-sm font-semibold">Validated</span>
+</div>
+<span class="font-label-sm text-label-sm text-slate-500">Ready for direct warehouse ingestion (Snowflake, BigQuery, Postgres)</span>
+</div>
+</div>
+<!-- Right Quick Controls & Primary Action Button -->
+<div class="flex flex-wrap items-center gap-space-md ml-auto">
+<!-- Format Toggle -->
+<div class="flex items-center p-1 bg-slate-100 border border-slate-200 rounded-lg">
+<button class="px-2.5 py-1 rounded text-white bg-amber-600 shadow-2xs font-label-sm text-label-sm font-semibold transition-all cursor-pointer" id="formatUtf8Bom" type="button">
+              UTF-8 BOM
+            </button>
+<button class="px-2.5 py-1 rounded text-slate-600 hover:text-slate-900 font-label-sm text-label-sm font-medium transition-all cursor-pointer" id="formatUtf8Std" type="button">
+              Standard UTF-8
+            </button>
+</div>
+<!-- Primary Amber Export Button -->
+<button class="px-space-lg py-2.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-body-md text-body-md font-semibold flex items-center gap-2 shadow-sm shadow-amber-600/30 transition-all transform active:scale-95 cursor-pointer" id="exportCsvBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Enriched CSV (with UTF-8 BOM)</span>
+</button>
+</div>
+</aside>
+</div>
+</div>
+<!-- Interactive Logic Hook -->
+<script>
+    (function () {
+      const runBtn = document.getElementById('runClassifierBtn');
+      const exportBtn = document.getElementById('exportCsvBtn');
+      const bomBtn = document.getElementById('formatUtf8Bom');
+      const stdBtn = document.getElementById('formatUtf8Std');
+      const presetBtn = document.getElementById('presetDropdownToggle');
+
+      if (runBtn) {
+        runBtn.addEventListener('click', () => {
+          const originalText = runBtn.innerHTML;
+          runBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Processing Queue...</span>';
+          runBtn.classList.add('opacity-90');
+          setTimeout(() => {
+            runBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-white">check</span><span>Complete (1,420 Rows)</span>';
+            setTimeout(() => {
+              runBtn.innerHTML = originalText;
+              runBtn.classList.remove('opacity-90');
+            }, 2500);
+          }, 1800);
+        });
+      }
+
+      if (exportBtn) {
+        exportBtn.addEventListener('click', () => {
+          const originalText = exportBtn.innerHTML;
+          exportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-bounce">arrow_downward</span><span>Building Stream...</span>';
+          setTimeout(() => {
+            exportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span><span>Export Dispatched</span>';
+            setTimeout(() => {
+              exportBtn.innerHTML = originalText;
+            }, 2000);
+          }, 1200);
+        });
+      }
+
+      if (bomBtn && stdBtn) {
+        bomBtn.addEventListener('click', () => {
+          bomBtn.className = "px-2.5 py-1 rounded text-white bg-amber-600 shadow-2xs font-label-sm text-label-sm font-semibold transition-all cursor-pointer";
+          stdBtn.className = "px-2.5 py-1 rounded text-slate-600 hover:text-slate-900 font-label-sm text-label-sm font-medium transition-all cursor-pointer";
+          if (exportBtn) {
+            exportBtn.querySelector('span:last-child').textContent = 'Export Enriched CSV (with UTF-8 BOM)';
+          }
+        });
+
+        stdBtn.addEventListener('click', () => {
+          stdBtn.className = "px-2.5 py-1 rounded text-white bg-amber-600 shadow-2xs font-label-sm text-label-sm font-semibold transition-all cursor-pointer";
+          bomBtn.className = "px-2.5 py-1 rounded text-slate-600 hover:text-slate-900 font-label-sm text-label-sm font-medium transition-all cursor-pointer";
+          if (exportBtn) {
+            exportBtn.querySelector('span:last-child').textContent = 'Export Enriched CSV (Standard UTF-8)';
+          }
+        });
+      }
+
+      if (presetBtn) {
+        presetBtn.addEventListener('click', () => {
+          const toast = document.createElement('div');
+          toast.className = 'fixed bottom-24 right-8 z-50 bg-white border border-slate-200 text-slate-900 px-4 py-2 rounded-lg shadow-xl font-label-sm text-label-sm flex items-center gap-2 animate-fade-in';
+          toast.innerHTML = '<span class="material-symbols-outlined text-amber-600 text-[16px]">check_circle</span> Preset "Q3_Enterprise_Audit" saved to profile.';
+          document.body.appendChild(toast);
+          setTimeout(() => toast.remove(), 2600);
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="fixed bottom-0 left-0 right-0 z-40 h-8 bg-white/95 backdrop-blur-md border-t border-slate-200 px-margin flex items-center justify-between font-label-sm text-label-sm text-slate-500 shadow-2xs"><div class="flex items-center gap-space-md"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span><span>Latency: <strong class="text-slate-900 font-mono">142ms</strong></span></span><span>•</span><span>Tokens: <strong class="text-slate-900 font-mono">38.2k</strong></span><span>•</span><span class="text-emerald-700 font-semibold">CSV Buffer Ready</span></div><div class="flex items-center gap-space-md text-slate-500"><span class="hidden md:inline">ReviewScope AI Processing Engine</span><span>UTF-8 Engine</span><span>v2.4.0-stable</span></div></footer></body></html>

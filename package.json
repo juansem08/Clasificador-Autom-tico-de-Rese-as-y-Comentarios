@@ -14,6 +14,14 @@
     "Juan Sebastián Mayorga <juan.mayorgaj@campusucc.edu.co>"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juansem08/Clasificador-Autom-tico-de-Rese-as-y-Comentarios.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juansem08/Clasificador-Autom-tico-de-Rese-as-y-Comentarios/issues"
+  },
+  "homepage": "https://github.com/juansem08/Clasificador-Autom-tico-de-Rese-as-y-Comentarios#readme",
   "scripts": {
     "dev": "electron-vite dev",
     "dev:debug": "electron-vite dev --sourcemap",
