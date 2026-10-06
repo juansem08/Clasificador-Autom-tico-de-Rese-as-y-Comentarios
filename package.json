@@ -32,7 +32,8 @@
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "styles:check": "tailwindcss -i ./src/renderer/src/index.css --content ./src/renderer/src/**/*.{tsx,html} -o ./out/test-styles.css"
+    "styles:check": "tailwindcss -i ./src/renderer/src/index.css --content ./src/renderer/src/**/*.{tsx,html} -o ./out/test-styles.css",
+    "audit": "npm audit --audit-level=high"
   },
   "prettier": {
     "semi": false,
@@ -46,7 +47,9 @@
   },
   "overrides": {
     "react": "$react",
-    "react-dom": "$react-dom"
+    "react-dom": "$react-dom",
+    "tar": "^7.5.21",
+    "http-cache-semantics": "^4.2.1"
   },
   "devDependencies": {
     "@electron-toolkit/preload": "3.0.1",
