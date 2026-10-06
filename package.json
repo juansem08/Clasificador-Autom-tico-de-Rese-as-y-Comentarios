@@ -1,6 +1,7 @@
 {
   "name": "review-classifier-ai",
   "version": "0.1.0",
+  "description": "Enterprise CSV Review Classifier Studio powered by Electron, React, Tailwind CSS and Google Gemini 2.5 Flash",
   "main": "./out/main/index.js",
   "author": "ReviewClassifier AI Team",
   "license": "MIT",
