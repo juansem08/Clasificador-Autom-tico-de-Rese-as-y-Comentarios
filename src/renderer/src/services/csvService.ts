@@ -20,7 +20,7 @@ export class CsvService {
         skipEmptyLines: 'greedy',
         dynamicTyping: false,
         worker: false, // Evita overhead de serialización IPC/Worker en archivos < 50MB
-        complete: (results) => {
+        complete: (results: Papa.ParseResult<Record<string, any>>) => {
           if (results.errors && results.errors.length > 0 && results.data.length === 0) {
             return reject(new Error(`Error al parsear CSV: ${results.errors[0].message}`))
           }
@@ -50,7 +50,7 @@ export class CsvService {
             data: indexedData
           })
         },
-        error: (error) => {
+        error: (error: Papa.ParseError) => {
           reject(new Error(`Fallo de lectura de archivo CSV: ${error.message}`))
         }
       })
