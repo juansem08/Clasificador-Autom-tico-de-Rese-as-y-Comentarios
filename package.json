@@ -1,117 +1,35 @@
 {
-  "name": "review-classifier-ai",
-  "version": "1.0.0",
-  "description": "Enterprise CSV Review Classifier Studio powered by Electron, React, Tailwind CSS and Google Gemini 2.5 Flash",
-  "main": "./out/main/index.js",
-  "files": [
-    "out"
-  ],
-  "author": {
-    "name": "ReviewClassifier AI Team",
-    "email": "juan.mayorgaj@campusucc.edu.co"
-  },
-  "contributors": [
-    "Juan Sebastián Mayorga <juan.mayorgaj@campusucc.edu.co>"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/juansem08/Clasificador-Autom-tico-de-Rese-as-y-Comentarios.git"
-  },
-  "bugs": {
-    "url": "https://github.com/juansem08/Clasificador-Autom-tico-de-Rese-as-y-Comentarios/issues"
-  },
-  "homepage": "https://github.com/juansem08/Clasificador-Autom-tico-de-Rese-as-y-Comentarios#readme",
+  "name": "app-escritorio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "electron-vite dev",
-    "dev:debug": "electron-vite dev --sourcemap",
-    "preview": "electron-vite preview",
-    "start": "electron-vite preview",
-    "build": "npm run typecheck && electron-vite build",
-    "build:unpack": "npm run build && electron-builder --dir",
-    "build:win": "npm run build && electron-builder --win",
-    "postinstall": "electron-builder install-app-deps",
-    "rebuild": "electron-builder install-app-deps",
-    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
-    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
-    "typecheck": "npm run typecheck:node && npm run typecheck:web",
-    "typecheck:watch": "tsc --noEmit -p tsconfig.web.json --watch",
-    "lint:check": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts",
-    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
-    "format:check": "prettier --check .",
-    "format": "prettier --write .",
-    "styles:check": "tailwindcss -i ./src/renderer/src/index.css --content ./src/renderer/src/**/*.{tsx,html} -o ./out/test-styles.css",
-    "audit": "npm audit --audit-level=high",
-    "ci:validate": "npm run typecheck && npm run lint:check && npm run build"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b",
+    "lint": "oxlint",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@google/genai": "2.27.0",
-    "papaparse": "5.4.1",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
-  },
-  "overrides": {
-    "react": "$react",
-    "react-dom": "$react-dom",
-    "tar": "^7.5.21",
-    "http-cache-semantics": "^4.2.1"
+    "@google/genai": "^2.23.0",
+    "@types/papaparse": "^5.5.2",
+    "autoprefixer": "^10.6.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.47.0",
+    "papaparse": "^5.7.0",
+    "postcss": "^8.5.28",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^3.4.19"
   },
   "devDependencies": {
-    "@electron-toolkit/preload": "3.0.1",
-    "@electron-toolkit/utils": "3.0.0",
-    "@types/node": "20.14.9",
-    "@types/papaparse": "5.3.14",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
-    "@vitejs/plugin-react": "4.3.1",
-    "autoprefixer": "10.4.19",
-    "electron": "31.0.2",
-    "electron-builder": "24.13.3",
-    "electron-vite": "2.3.0",
-    "postcss": "8.4.38",
-    "tailwindcss": "3.4.4",
-    "typescript": "5.4.5",
-    "vite": "5.3.1"
-  },
-  "build": {
-    "appId": "com.reviewclassifier.ai",
-    "productName": "ReviewClassifier AI",
-    "asar": true,
-    "compression": "maximum",
-    "directories": {
-      "buildResources": "build",
-      "output": "dist"
-    },
-    "files": [
-      "out/**/*",
-      "!out/**/*.tsbuildinfo",
-      "!node_modules/**/@types",
-      "!node_modules/**/*.md"
-    ],
-    "win": {
-      "target": [
-        "nsis",
-        "portable"
-      ]
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true
-    },
-    "mac": {
-      "target": [
-        "dmg"
-      ]
-    },
-    "linux": {
-      "target": [
-        "AppImage",
-        "deb"
-      ]
-    }
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
   }
 }

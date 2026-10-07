@@ -1,7 +1,6 @@
-// Configuración de pipeline determinístico para Tailwind y Autoprefixer
-module.exports = {
+export default {
   plugins: {
     tailwindcss: {},
-    autoprefixer: {}
-  }
-}
+    autoprefixer: {},
+  },
+};

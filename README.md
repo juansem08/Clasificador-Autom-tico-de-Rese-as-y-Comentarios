@@ -1,16 +1,32 @@
-# ReviewClassifier AI - Enterprise CSV Classifier Studio
+# React + TypeScript + Vite
 
-Clonado directamente desde **Stitch** (Proyecto ID: `229077041302203199`).
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## Estructura del Proyecto
+Currently, two official plugins are available:
 
-- **`index.html`**: Pantalla principal activa — **ReviewClassifier AI: Enterprise CSV Classifier Studio** (pantalla ID: `af0924ccbfe3474b99a309c1c506c555`).
-- **`logo.svg`**: Logo vectorial del proyecto (**ReviewClassifier AI Logo**, pantalla ID: `7976c659b8e14862b40fc3d9e27d58a8`).
-- **`executive-pulse-dark.html`**: Vista del dashboard ejecutivo en Dark Mode (**ReviewScope AI - Executive Pulse**, pantalla ID: `9eea69a2f6d84db7a63e7d777314fbf7`).
-- **`executive-pulse-light.html`**: Variante del dashboard ejecutivo en Light Mode (**ReviewScope AI - Executive Pulse**, pantalla ID: `1e8746020b8d4d8b98d973b6ed33acf5`).
-- **`mark-original.svg`**: Logo / Mark inicial de ReviewScope AI (pantalla ID: `8712db9529a748d79669017a64106e5b`).
-- **`DESIGN.md`**: Sistema de diseño completo, tokens cromáticos, tipografía y especificaciones de componentes.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-##  Cómo visualizarlo
+## React Compiler
 
-Puedes abrir directamente cualquiera de los archivos `.html` en tu navegador o usar un servidor local (ej. Live Server, Vite o `npx serve .`).
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
+
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
