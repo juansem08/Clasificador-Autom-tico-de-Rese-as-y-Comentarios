@@ -3,12 +3,33 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "dist-electron/main.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "typecheck": "tsc -b",
+    "build:electron-main": "tsc -p tsconfig.electron.json",
+    "dev:electron": "concurrently -k \"npm run dev\" \"wait-on tcp:5173 && npm run build:electron-main && cross-env NODE_ENV=development electron .\"",
+    "build:electron": "npm run build && npm run build:electron-main && electron-builder",
     "lint": "oxlint",
     "preview": "vite preview"
+  },
+  "build": {
+    "appId": "com.reviewclassifier.desktop",
+    "productName": "ReviewClassifier AI",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    }
   },
   "dependencies": {
     "@google/genai": "^2.23.0",
@@ -28,8 +49,13 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^10.0.5",
+    "cross-env": "^10.1.0",
+    "electron": "^44.6.0",
+    "electron-builder": "^26.15.3",
     "oxlint": "^1.81.0",
     "typescript": "~6.0.2",
-    "vite": "^8.3.0"
+    "vite": "^8.3.0",
+    "wait-on": "^9.5.1"
   }
 }

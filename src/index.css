@@ -4,44 +4,46 @@
 
 @layer base {
   * {
-    border-color: rgba(51, 65, 85, 0.4);
+    border-color: rgba(255, 255, 255, 0.08);
   }
   body {
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    user-select: none;
   }
 }
 
-/* Custom scrollbars */
+/* Región de arrastre para ventana de Electron */
+.window-drag-region {
+  -webkit-app-region: drag;
+}
+
+.window-no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* Custom scrollbars oscuras estilo Stitch */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #010f1f;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 4px;
+  background: #1c2b3c;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #273647;
 }
 
-/* Glassmorphism and glow styles */
+/* Glassmorphism y glow de Stitch */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(18, 33, 49, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(51, 65, 85, 0.45);
-}
-
-.glow-indigo {
-  box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.15);
-}
-
-.glow-indigo-hover:hover {
-  box-shadow: 0 0 30px -5px rgba(99, 102, 241, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }

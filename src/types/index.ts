@@ -40,3 +40,15 @@ export interface BatchProgress {
   totalRows: number;
   message: string;
 }
+
+declare global {
+  interface Window {
+    electronAPI?: {
+      minimizeWindow: () => void;
+      maximizeWindow: () => void;
+      closeWindow: () => void;
+      isElectron?: boolean;
+    };
+  }
+}
+
