@@ -2,7 +2,7 @@
 
 Clonado directamente desde **Stitch** (Proyecto ID: `229077041302203199`).
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 - **`index.html`**: Pantalla principal activa — **ReviewClassifier AI: Enterprise CSV Classifier Studio** (pantalla ID: `af0924ccbfe3474b99a309c1c506c555`).
 - **`logo.svg`**: Logo vectorial del proyecto (**ReviewClassifier AI Logo**, pantalla ID: `7976c659b8e14862b40fc3d9e27d58a8`).
@@ -11,6 +11,6 @@ Clonado directamente desde **Stitch** (Proyecto ID: `229077041302203199`).
 - **`mark-original.svg`**: Logo / Mark inicial de ReviewScope AI (pantalla ID: `8712db9529a748d79669017a64106e5b`).
 - **`DESIGN.md`**: Sistema de diseño completo, tokens cromáticos, tipografía y especificaciones de componentes.
 
-## 🚀 Cómo visualizarlo
+##  Cómo visualizarlo
 
 Puedes abrir directamente cualquiera de los archivos `.html` en tu navegador o usar un servidor local (ej. Live Server, Vite o `npx serve .`).
