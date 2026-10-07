@@ -3,4 +3,5 @@ title ReviewClassifier AI - Desktop Studio
 echo ========================================================
 echo   Iniciando ReviewClassifier AI Desktop Studio (Electron)
 echo ========================================================
-npm run dev:electron
+call npm run dev:electron
+pause
