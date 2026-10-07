@@ -81,7 +81,10 @@ function createWindow(): void {
     mainWindow.loadFile(prodFile);
   }
 
+  mainWindow.show();
+  mainWindow.setAlwaysOnTop(true);
   mainWindow.focus();
+  mainWindow.setAlwaysOnTop(false);
 
   mainWindow.on('closed', () => {
     log('mainWindow closed');
