@@ -10,7 +10,7 @@ export class GeminiClassifierService {
   private ai: GoogleGenAI;
   private modelName: string;
 
-  constructor(apiKey: string, modelName: string = 'gemini-2.5-flash') {
+  constructor(apiKey: string, modelName: string = 'gemini-3.8-flash') {
     this.ai = new GoogleGenAI({ apiKey });
     this.modelName = modelName;
   }
@@ -95,6 +95,28 @@ Devuelve una clasificación para CADA una de las opiniones identificada por su I
       } catch (err: any) {
         if (abortSignal?.aborted || err?.name === 'AbortError') {
           throw err;
+        }
+
+        // Si Google indica que el modelo no está disponible para nuevos usuarios (HTTP 404 NOT_FOUND)
+        const isModelUnavailable =
+          err?.status === 404 ||
+          err?.message?.includes('404') ||
+          err?.message?.includes('NOT_FOUND') ||
+          err?.message?.includes('no longer available') ||
+          err?.message?.includes('not found');
+
+        if (isModelUnavailable) {
+          console.warn(`Modelo ${this.modelName} no disponible para esta clave. Probando modelo alternativo compatible...`);
+          if (this.modelName === 'gemini-2.5-flash') {
+            this.modelName = 'gemini-3.8-flash';
+            continue;
+          } else if (this.modelName === 'gemini-3.8-flash') {
+            this.modelName = 'gemini-2.0-flash';
+            continue;
+          } else if (this.modelName === 'gemini-2.0-flash') {
+            this.modelName = 'gemini-1.5-flash';
+            continue;
+          }
         }
 
         attempt++;
