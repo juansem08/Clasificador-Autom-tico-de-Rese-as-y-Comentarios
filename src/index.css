@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    border-color: rgba(255, 255, 255, 0.08);
+    border-color: #e2e8f0;
   }
   body {
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -21,29 +21,21 @@
   -webkit-app-region: no-drag;
 }
 
-/* Custom scrollbars oscuras estilo Stitch */
+/* Custom scrollbars estilo Stitch Light */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #010f1f;
+  background: #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1c2b3c;
+  background: #cbd5e1;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #273647;
-}
-
-/* Glassmorphism y glow de Stitch */
-.glass-panel {
-  background: rgba(18, 33, 49, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #94a3b8;
 }
